@@ -1,4 +1,6 @@
-## Get the initial administrative password
+## Automated installation of Jenkins on AWS EC2 using Terraform
+
+Get the initial administrative password
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 Jenkins Configuration:
