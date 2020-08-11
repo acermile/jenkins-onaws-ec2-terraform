@@ -10,6 +10,15 @@ sudo service jenkins start
 
 sudo yum install git -y
 
+sudo curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.12/2020-07-08/bin/linux/amd64/kubectl
+sudo chmod +x ./kubectl
+
+sudo mkdir -p $HOME/bin && sudo cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+
+sudo echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+
+kubectl version --short --client
+
 sudo -su jenkins
 
 sudo curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.12/2020-07-08/bin/linux/amd64/kubectl
